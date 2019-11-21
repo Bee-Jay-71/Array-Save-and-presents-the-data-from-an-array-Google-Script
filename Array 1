@@ -1,0 +1,37 @@
+// Write data in cell G1, H1, I1
+
+function arrayPlay() {
+  
+  var newArray = [];
+  
+  // Variable that saves the data from G1->I1.
+  var cellIn1 = ("G1");
+  var cellIn2 = ("H1");
+  var cellIn3 = ("I1");
+  
+  var sheet = SpreadsheetApp.getActiveSheet();
+  
+  // Defines where the data is recieved. (G1, H1, I1)
+  var cellOut1 = sheet.getRange(cellIn1);
+  var cellOut2 = sheet.getRange(cellIn2);
+  var cellOut3 = sheet.getRange(cellIn3);
+  
+  // Recieve the data from those cells
+  var data1 = cellOut1.getValue();
+  var data2 = cellOut2.getValue();
+  var data3 = cellOut3.getValue();
+  
+  // Puts the data in the Array. (newArray)
+  newArray.push(data1, data2, data3)
+    
+  // Presents the data in Cell 1-3 (A1, A2, A3)) Downwards
+   sheet.appendRow([newArray[0]]);
+   sheet.appendRow([newArray[1]]);
+   sheet.appendRow([newArray[2]]);
+  
+  // Presents the data in Cell 1-3 (A1, B1, C1) Sideways
+  sheet.appendRow([newArray[0], newArray[1], newArray[2]]);
+
+  Logger.log(newArray);
+  
+}
