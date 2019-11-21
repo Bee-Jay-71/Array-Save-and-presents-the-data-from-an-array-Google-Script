@@ -7,7 +7,7 @@ Write data in cells. Save them as an Array. Present the data in other cells.
 
 3) The data in G1, H1, I1 will be stored in an Array.
 
-4) The data from the Array will then be sent too cells:
+4) The data from the Array will then be sent to cells:
 
 A1= Apple
 A2= Orange
